@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "18554717-FF8B-4302-A7EF-9FE3C254A1D0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF140B3D-FB46-4CFB-A80C-867C4D643964"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCalculatorApp/Views/CalcButtonNum.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78C15597-2480-4738-80C9-19C69E61127F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCalculatorApp/Views/KeypadView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "78C15597-2480-4738-80C9-19C69E61127F - 964206cff8786142"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;)&gt; in MyCalculatorApp.KeypadView.body.getter : some"
+                  moduleName = "MyCalculatorApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/urijbagrij/Desktop/MyCalculatorApp/MyCalculatorApp/Views/KeypadView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+               <Location
+                  uuid = "78C15597-2480-4738-80C9-19C69E61127F - 4d89c3c0460758b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #4 () -&gt; SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonNum, MyCalculatorApp.CalcButtonOperation)&gt;&gt;)&gt; in MyCalculatorApp.KeypadView.body.getter : some"
+                  moduleName = "MyCalculatorApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/urijbagrij/Desktop/MyCalculatorApp/MyCalculatorApp/Views/KeypadView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AA2A8FB-7E05-4D7B-A460-DD1D93D84E63"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCalculatorApp/CycleView/CycleView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "090AACA3-933E-4AC6-A883-585E57E715C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCalculatorApp/CycleView/CycleView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CycleView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
