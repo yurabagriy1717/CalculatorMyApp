@@ -1,20 +1,19 @@
 //
 //  CalculatorView.swift
-//  MyCalculatorApp
-//
-//  Created by Юрій Багрій on 17.09.2025.
 //
 
 import SwiftUI
 
 struct CalculatorView: View {
+    
+    @StateObject private var viewModel = KeypadViewModel()
+    
     var body: some View {
         VStack(spacing : 16) {
             Spacer()
-            CalculatorDisplayView()
-            //                Spacer()
-            KeypadView()
-            
+            CalculatorDisplayView(viewModel: viewModel)
+            KeypadView(viewModel: viewModel)
+
         }
         .background(Color.black)
     }

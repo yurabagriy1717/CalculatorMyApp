@@ -1,19 +1,15 @@
 //
 //  CalculatorDisplayView.swift
-//  MyCalculatorApp
-//
-//  Created by Юрій Багрій on 17.09.2025.
 //
 
 import SwiftUI
 
 struct CalculatorDisplayView: View {
-    
-    var text: String = "0"
+    @ObservedObject var viewModel: KeypadViewModel
     
     var body: some View {
         VStack {
-            Text(text)
+            Text(viewModel.input)
                 .font(.system(size: 56, weight: .bold))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -24,5 +20,6 @@ struct CalculatorDisplayView: View {
 }
 
 #Preview {
-    CalculatorDisplayView()
+    CalculatorDisplayView(viewModel: KeypadViewModel())
 }
+
