@@ -1,15 +1,5 @@
 //
 //  CalcButtonOperation.swift
-//  MyCalculatorApp
-//
-//  Created by Юрій Багрій on 17.09.2025.
-//
-
-//
-//  CalcButton.swift
-//  MyCalculatorApp
-//
-//  Created by Юрій Багрій on 17.09.2025.
 //
 
 import SwiftUI
