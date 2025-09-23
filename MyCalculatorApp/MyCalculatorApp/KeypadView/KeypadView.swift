@@ -9,6 +9,16 @@ struct KeypadView: View {
     
     var body: some View {
         VStack {
+            
+            if let error =  viewModel.error {
+                Text(error).foregroundColor(Color.red)
+            }
+            
+            else {
+                Text(viewModel.input)
+            }
+            
+            
             HStack {
                 CalcButtonNumView(title: "AC", action: { viewModel.clear() })
                 CalcButtonNumView(title: "+/-", action: { print("натиснуто +/-") })
@@ -44,7 +54,6 @@ struct KeypadView: View {
                 CalcButtonOperation(title: "=", action: { viewModel.calculate() })
             }
         }
-        
     }
 }
 

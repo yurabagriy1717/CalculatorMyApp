@@ -1,6 +1,5 @@
 //
 //  ContentView.swift
-//  MyCalculatorApp
 //
 
 import SwiftUI
