@@ -5,7 +5,6 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    
     @StateObject private var viewModel = KeypadViewModel()
     
     var body: some View {

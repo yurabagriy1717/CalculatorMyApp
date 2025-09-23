@@ -1,8 +1,5 @@
 //
 //  MyCalculatorAppApp.swift
-//  MyCalculatorApp
-//
-//  Created by Юрій Багрій on 17.09.2025.
 //
 
 import SwiftUI
