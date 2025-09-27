@@ -7,14 +7,18 @@ import SwiftUI
 
 class KeypadViewModel: ObservableObject {
     @Published var input: String = "0"
+    @Published var expression: String = ""
     @Published var error: String? = nil
+    
     
     var previousNum: Double?
     var operation: String = ""
     var currentNum: Double?
     var isTyping: Bool = false
+    var tokens: [String] = []
     
     func pressKey(_ key:String) {
+        
         if isTyping == false {
             input = key
             isTyping = true
@@ -39,6 +43,10 @@ class KeypadViewModel: ObservableObject {
             input = key
         }
         
+        if let left = previousNum, !operation.isEmpty {
+            expression = "\(left) \(operation) \(input)"
+        }
+        
     }
     
     func clear() {
@@ -47,13 +55,18 @@ class KeypadViewModel: ObservableObject {
         currentNum = nil
         operation = ""
         error = nil
+        expression = ""
         isTyping = false
     }
     
     func setOperation(_ operation: String) {
         previousNum = Double(input)
         self.operation = operation
-        input = "0"
+        isTyping = false
+        
+        if let left = previousNum {
+            expression = "\(left) \(operation)"
+        }
     }
     
     func calculate() {
@@ -86,4 +99,16 @@ class KeypadViewModel: ObservableObject {
             
         }
     }
+    
+    func decimalPoint() {
+        if input.contains(".") {
+            return
+        }
+        
+        if isTyping == true {
+            input += "."
+        }
+    }
+    
+    
 }
