@@ -50,7 +50,7 @@ struct KeypadView: View {
             HStack {
                 CalcButtonNumView(title: "cacl", action: { print("натиснуто 1") })
                 CalcButtonNumView(title: "0", action: { viewModel.pressKey("0") })
-                CalcButtonNumView(title: ",", action: { print("натиснуто %") })
+                CalcButtonNumView(title: ".", action: { viewModel.decimalPoint() })
                 CalcButtonOperation(title: "=", action: { viewModel.calculate() })
             }
         }
