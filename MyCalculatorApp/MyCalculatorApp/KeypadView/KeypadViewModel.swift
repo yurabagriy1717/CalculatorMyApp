@@ -10,7 +10,6 @@ class KeypadViewModel: ObservableObject {
     @Published var expression: String = ""
     @Published var error: String? = nil
     
-    
     var previousNum: Double?
     var operation: String = ""
     var currentNum: Double?
@@ -18,6 +17,10 @@ class KeypadViewModel: ObservableObject {
     var tokens: [String] = []
     
     func pressKey(_ key:String) {
+        
+        if error != nil {
+            clear()
+        }
         
         if isTyping == false {
             input = key
@@ -37,22 +40,11 @@ class KeypadViewModel: ObservableObject {
                 }
             }
         }
-        
-        if error != nil {
-            error = nil
-            input = key
-        }
-        
-        if let left = previousNum, !operation.isEmpty {
-            expression = "\(left) \(operation) \(input)"
-        }
-        
     }
     
     func clear() {
         input = "0"
-        previousNum = nil
-        currentNum = nil
+        tokens.removeAll()
         operation = ""
         error = nil
         expression = ""
@@ -60,43 +52,65 @@ class KeypadViewModel: ObservableObject {
     }
     
     func setOperation(_ operation: String) {
-        previousNum = Double(input)
-        self.operation = operation
+        tokens.append(input)
+        tokens.append(operation)
         isTyping = false
         
-        if let left = previousNum {
-            expression = "\(left) \(operation)"
-        }
+        expression = tokens.joined(separator: " ")
     }
     
     func calculate() {
-        currentNum = Double(input)
+        
+        tokens.append(input)
+        var work = tokens
         var result: Double = 0
-        if let previousNum, let currentNum {
-            if operation == "+" {
-                result = previousNum + currentNum
-                input = String(result)
-            }
-            
-            else if operation == "-" {
-                result = previousNum - currentNum
-                input = String(result)
-            }
-            
-            else if operation == "*" {
-                result = previousNum * currentNum
-                input = String(result)
-            }
-            
-            else if operation == "/" {
-                if currentNum == 0 {
-                    error = "на 0 ділити не можна"
-                    return
+        var i = 0
+        
+        while i < work.count {
+            if work[i] == "*" || work[i] == "/" {
+                if let num1 = Double(work[i-1]) ,let num2 = Double(work[i+1]) {
+                    if work[i] == "*" {
+                        result = num1 * num2
+                    }
+                    else if work[i] == "/" {
+                        if num2 == 0 {
+                            error = "ділити на 0 неможна"
+                            return
+                        }
+                        result = num1 / num2
+                    }
+                    work.replaceSubrange((i-1)...(i+1), with: [String(result)])
+                    i = 0
+                    continue
                 }
-                result = previousNum / currentNum
-                input = String(result)
             }
-            
+            i += 1
+        }
+        
+        i = 0
+        
+        while i < work.count {
+            if work[i] == "+" || work[i] == "-" {
+                if let num1 = Double(work[i-1]) , let num2 = Double(work[i+1]) {
+                    if work[i] == "+" {
+                        result = num1 + num2
+                    }
+                    else if work[i] == "-" {
+                        result = num1 - num2
+                    }
+                    work.replaceSubrange((i-1)...(i+1), with: [String(result)])
+                    i = 0
+                    continue
+                }
+            }
+            i += 1
+        }
+        
+        if let final = work.first {
+            input = final
+            expression = tokens.joined(separator: " ") + " = "
+            tokens = [final]
+            isTyping = false
         }
     }
     
